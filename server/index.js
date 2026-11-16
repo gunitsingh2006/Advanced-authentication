@@ -8,7 +8,6 @@ import { connectDB } from './db/connectDB.js';
 import authRoutes from './routes/auth.route.js';
 
 
-
 dotenv.config();
 const app = express();
 
@@ -18,6 +17,7 @@ app.get('/', (req,res)=>{
     res.send('Hello World');
 })
 
+app.use(express.json()); // allow us to parse json data from the incoming request:req.body
 app.use('/api/auth', authRoutes);
 
 app.listen(process.env.PORT || 3000, () => {
