@@ -7,7 +7,7 @@ export const mailtrapClient = new MailtrapClient({
   token: process.env.MAILTRAP_API_TOKEN,
 });
 
-const sender = {
+export const sender = {
   email: "hello@demomailtrap.co",
   name: "Gunit Singh",
 };
